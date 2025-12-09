@@ -5,10 +5,10 @@ import app from "./app.js";
 import connectDB from "./config/db.js";
 
 const allowedOrigins = [
-  "http://localhost:5174",
+  process.env.CLIENT_URL,
+  process.env.ADMIN_URL,
   "http://localhost:5173",
-  "https://your-frontend.vercel.app",
-  "https://your-admin.vercel.app",
+  "http://localhost:5174",
 ];
 
 dotenv.config();

@@ -12,10 +12,11 @@ import paymentRoutes from "./routes/paymentRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 
 const allowedOrigins = [
-  "http://localhost:5174", // Frontend (dev)
-  "http://localhost:5173", // Admin (dev) - update if different
-  "https://your-frontend.vercel.app", // Replace with your actual Vercel frontend URL
-  "https://your-admin.vercel.app", // Replace with your actual Vercel admin URL
+  process.env.CLIENT_URL,
+  process.env.ADMIN_URL,
+  "http://localhost:5173", // Frontend (dev)
+  "http://localhost:5174", // Admin (dev) - update if different
+  "",
 ];
 
 dotenv.config();
